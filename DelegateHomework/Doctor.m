@@ -11,12 +11,10 @@
 @implementation Doctor
 
 
-
-
-
 -(void) patientFeelsBad: (Patient*) patient
 {
     NSLog(@"Patient %@ feels bad", patient.name);
+    
     if (patient.tempereture >= 37.f && patient.tempereture <=38.f)
     {
         [patient MRT];
@@ -30,7 +28,6 @@
         NSLog(@"Patient %@ hopeless", patient.name);
     }
 }
-
 
 
 

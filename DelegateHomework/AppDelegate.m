@@ -17,11 +17,14 @@
 @implementation AppDelegate
 
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+ 
     
-    
-    Patient* patient1 = [[Patient alloc] init];
+
+   
+      Patient* patient1 = [[Patient alloc] init];
     patient1.name = @"Alex";
     patient1.tempereture = 36.6f;
     
@@ -46,12 +49,24 @@
     patient3.delegate = doctor;
     patient4.delegate = doctor;
     
-    NSLog(@"%@ are you OK? %@", patient1.name, [patient1 howAreYou] ? @"Yes" : @"No");
-    NSLog(@"%@ are you OK? %@", patient2.name, [patient2 howAreYou] ? @"Yes" : @"No");
-    NSLog(@"%@ are you OK? %@", patient3.name, [patient3 howAreYou] ? @"Yes" : @"No");
-    NSLog(@"%@ are you OK? %@", patient4.name, [patient4 howAreYou] ? @"Yes" : @"No");
+    
+
+    NSLog(@"%@ are you OK?", patient1.name);
+        NSLog(@"%@", [patient1 howAreYou] ? @"Yes" : @"No");
+    NSLog(@"%@ are you OK?", patient2.name);
+        NSLog(@"%@", [patient2 howAreYou] ? @"Yes" : @"No");
+    NSLog(@"%@ are you OK?", patient3.name);
+        NSLog(@"%@", [patient3 howAreYou] ? @"Yes" : @"No");
+    NSLog(@"%@ are you OK?", patient4.name);
+    NSLog(@"%@", [patient4 howAreYou] ? @"Yes" : @"No");
+  //  NSLog(@"%@ are you OK? %@", patient4.name, [patient4 howAreYou] ? @"Yes" : @"No");
+    
 
     
+-(void) question
+    {
+        
+    }
     
     
     
