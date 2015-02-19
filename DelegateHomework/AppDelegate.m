@@ -62,9 +62,7 @@
     NSLog(@"%@", [patient4 howAreYou] ? @"Yes" : @"No");
   //  NSLog(@"%@ are you OK? %@", patient4.name, [patient4 howAreYou] ? @"Yes" : @"No");
     */
- Patient* patients = [[Patient alloc] init];
-    
-    [self question: patients];
+ 
  
    
     NSArray* qwe = [NSArray arrayWithObjects:patient1, patient2, patient3, patient4, nil];
