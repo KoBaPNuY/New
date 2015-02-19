@@ -24,7 +24,7 @@
     
 
    
-      Patient* patient1 = [[Patient alloc] init];
+    Patient* patient1 = [[Patient alloc] init];
     patient1.name = @"Alex";
     patient1.tempereture = 36.6f;
     
@@ -48,37 +48,22 @@
     patient2.delegate = doctor;
     patient3.delegate = doctor;
     patient4.delegate = doctor;
-    
-    /*
-   
-
-    NSLog(@"%@ are you OK?", patient1.name);
-        NSLog(@"%@", [patient1 howAreYou] ? @"Yes" : @"No");
-    NSLog(@"%@ are you OK?", patient2.name);
-        NSLog(@"%@", [patient2 howAreYou] ? @"Yes" : @"No");
-    NSLog(@"%@ are you OK?", patient3.name);
-        NSLog(@"%@", [patient3 howAreYou] ? @"Yes" : @"No");
-    NSLog(@"%@ are you OK?", patient4.name);
-    NSLog(@"%@", [patient4 howAreYou] ? @"Yes" : @"No");
-  //  NSLog(@"%@ are you OK? %@", patient4.name, [patient4 howAreYou] ? @"Yes" : @"No");
-    */
- 
- 
+  
    
     NSArray* qwe = [NSArray arrayWithObjects:patient1, patient2, patient3, patient4, nil];
     
-    for ( Patient* patients in qwe)
+    for ( Patient* patient in qwe)
     {
-        [self question: patients];
+        [self question: patient];
     }
     
     return YES;
 }
 
--(void) question: (Patient*) patients
+-(void) question: (Patient*) patient
     {
-        NSLog(@"%@ are you OK?", patients.name );
-         NSLog(@"%@", [patients howAreYou] ? @"Yes":@"");
+        NSLog(@"%@ are you OK?", patient.name );
+        NSLog(@"%@", [patient howAreYou] ? @"Yes":@"");
     }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
