@@ -29,6 +29,6 @@
 @required
 
 -(void) patientFeelsBad: (Patient*) patient;
--(void) question;
+
 
 @end

@@ -12,7 +12,7 @@
 
 -(BOOL) howAreYou
 {
-    BOOL iFeelGood = NO; //arc4random() % 2;
+    BOOL iFeelGood = arc4random() % 2;
     
     if (!iFeelGood)
     {
@@ -33,9 +33,5 @@
 
 
 
--(void) question
-{
-    NSLog(@"%@ are you OK?", self.name);
-}
 
 @end

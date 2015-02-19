@@ -41,7 +41,7 @@
     Patient* patient4 = [[Patient alloc] init];
     patient4.name = @"Vadim";
     patient4.tempereture = 38.3f;
-    
+   
     Doctor* doctor = [[Doctor alloc] init];
 
     patient1.delegate = doctor;
@@ -49,7 +49,8 @@
     patient3.delegate = doctor;
     patient4.delegate = doctor;
     
-    
+    /*
+   
 
     NSLog(@"%@ are you OK?", patient1.name);
         NSLog(@"%@", [patient1 howAreYou] ? @"Yes" : @"No");
@@ -60,23 +61,27 @@
     NSLog(@"%@ are you OK?", patient4.name);
     NSLog(@"%@", [patient4 howAreYou] ? @"Yes" : @"No");
   //  NSLog(@"%@ are you OK? %@", patient4.name, [patient4 howAreYou] ? @"Yes" : @"No");
+    */
+ Patient* patients = [[Patient alloc] init];
     
-
+    [self question: patients];
+ 
+   
+    NSArray* qwe = [NSArray arrayWithObjects:patient1, patient2, patient3, patient4, nil];
     
--(void) question
+    for ( Patient* patients in qwe)
     {
-        
+        [self question: patients];
     }
-    
-    
-    
-    
-    
-    
-    
     
     return YES;
 }
+
+-(void) question: (Patient*) patients
+    {
+        NSLog(@"%@ are you OK?", patients.name );
+         NSLog(@"%@", [patients howAreYou] ? @"Yes":@"");
+    }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
